@@ -1,0 +1,69 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML  1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <meta http-equiv="Content-Tyoe"  
+   content="text/html; charset=utf-8" />
+   <title>Feedback Form</title>
+ </head>
+ <body>
+	<!-- Script Pursue - myform.html -->
+	<div><p>Please complete this form to submit your feedback:</p>
+	<form action="handle_myform.php" method="post">
+	
+	
+	<!--Multi Select Box -->
+	<p>
+	multiselect<br />
+	<select multiple name="multiselect" size=5>
+		<option value="val1">Value1</option>
+		<option value="val2">Value2</option>
+		<option value="val3">Value3</option>
+		<option value="val2">Value4</option>
+		<option value="val3">Value5</option>
+	</select>
+	</p>
+	
+	<!--Drop Down Selection Box -->
+	<p>
+	dropbox<br />
+	<select name="dropbox">
+		<option value="val1">Value1</option>
+		<option value="val2">Value2</option>
+		<option value="val3">Value3</option>
+	</select>
+	</p>
+	
+	<!--Free Form Large Text Entry Box -->
+	<p>
+	textarea<br />
+	<textarea name="textarea" cols="30" rows="4">
+	</textarea>
+	</p>
+
+	<!--Radio Buttons grouped by dv tag-->
+	<p>
+	radio buttons
+	<div>
+	<input type="radio" name="radio" value="x" />x
+	<input type="radio" name="radio" value="y" />y
+	<input type="radio" name="radio" value="z" />z
+	</div>
+	</p>
+
+	<!--Single Line Text Box-->
+	<p>
+	textbox<br />
+	<input type="text" name="textbox" size=20 />
+	</p>
+
+	<!--Submit Button-->	
+	<p>
+	<input type="submit" name="submit" value="submit" />
+	</p>
+	
+	</p>
+	</form>
+	</div>
+ </body>
+ </html>
