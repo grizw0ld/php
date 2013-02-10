@@ -1,0 +1,25 @@
+What  is the difference between and indexed and an associative array?  Indexed arrays count  up from 0 as elements are added and there is no real correlation between the index and the value.  An associative array is a key value pair where the key is used to describe the value, the key value pair are persistent through sorts.  
+
+When should you use quotation marks for an arrays key or value?  When shouldn't you?
+When either the key or value is a string it should be quoted, it should not be quoted when it is a number / integer
+
+How do you print a specific array element?  Ho do you print ever element in an array?  You can print a specific element by calling it with the array variable and the key or index of the value you would like to print (echo $array[0]).  You can print every element of an array using print_r($array) or though a for each loop (foreach($array as $value){print $value})
+
+What happens when you don't use the square brackets when adding an element to an array?
+If the square brackets are omitted entirely the array and all of it's values will be replaced by what ever single value you are adding.  
+
+What function returns the number of elements in an array? Sizeof()
+
+When must you use curly brackets for print arrays?  When the array uses strings for index's which must be quoted.  
+
+What is the difference between sort, asort and sort and rsort?
+Using sort will not maintain the key value relationships, asort will,  To sort in reverse or descending order use rsort.  
+
+What is the syntax for explode() and implode()?
+Explode: $array = (' ', $string); //the first argument is the separator to tell the function how to identify elements of the array
+Implode: $string = (', ', $array); /the first argument is the glue to determine how the elements of the array should be held together in string form.
+
+
+
+
+
