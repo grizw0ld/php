@@ -1,0 +1,9 @@
+What kind of variable is $_SERVER an example of? An array
+What character must all variables begin with? A $
+What characters can be used fires in a variable name? An underscore ( _ ), lower case or capital letter
+What other characters can be used in a variables name, after the first character? Letters, number and additional underscores.  
+Are variable names case-sensitive or case-insensitive? Case sensitive
+What does it mean to say that a variable is scalar? That it is holding a single value of no depth
+What are examples of scalar variable types? String, Floating point numbers and Integers
+What is an example of a nonscalar variable type? An array
+What is the difference between using single or double quotation marks? Single quotes handle strings as is while double quotes extrapolate them.  Double quotes an handle variables as well as escape characters.  

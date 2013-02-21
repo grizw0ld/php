@@ -1,0 +1,61 @@
+Why is it  important to have a user confirm their password during the registration process?  Because the values being entered are not visible to the user, it is important to make certain that the password is what the user had intended.  It may also be valuable to use the trim() function to clear out any leading or trailing white space.
+
+What is the basic structure of an if conditional in PHP?
+	If (condition) {
+		statement;
+	}
+ if-else conditional?
+
+	if (condition) {
+		statement;
+	} else {
+		other_statement;
+	}//end conditional
+if-elseif?
+	If (condition) {
+		statement;
+	} elseif (condition2) {
+		other_statement;
+	}
+
+ if-elseif -else?
+	if (condition) {
+		statement;
+	} elseif (contition_2) {
+		other_statement;
+	} else {
+		default_statement;
+	}
+
+What is the difference between the empty() and isset() functions? Empty() tests to see if a variable exists and that it is not equal to FALSE.   Isset() tests to see if a variable is set and is not null.
+
+What is the assignment operator? ( = )  What is the equality operator?  ( == )
+
+Without knowing anything about $var would the following conditional be true or false, why?
+If ($var =  'donut')  { //this conditional is true because $var is being assigned the value of donut
+
+What do these operators mean?  
+( && ) - and, both sides of this operator must be true in order to evaluate to true
+( || ) - or, one of the sides of this operator must be true in order to evaluate to true
+( ! ) - not, this can be used to test against an argument
+
+What is the syntax of a switch conditional?
+
+	switch($var) {
+		condition1:
+			statement;
+			break;
+		condition2:
+			statement;
+			break;
+		default:
+			statement;
+			break;
+		}
+		
+When is a switch most commonly used?  In cases when if conditionals become too large and unruly.  
+
+What is the syntax for a for loop?
+	for(value ; condition ; iteration){
+		statement;
+	}

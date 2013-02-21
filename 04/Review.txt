@@ -1,0 +1,9 @@
+What are the four primary arithmetic operators? (+, -, /, *)
+Why will the following code not work – print “The total is $$total”? The $$ references certain kind of variable
+What should be done instead?  The symbol should be escaped with \$
+Why must an HTML page that contains a form that’s being submitted to a PHP scrip be loaded through a URL.  PHP must be run through a URL for the script to be processed. 
+What functions can be used to format numerical values? round(), number_format()
+How do you format numbers to a specific number of decimals? Using the optional second argument of the methods, round(999.773,2);//999.77 
+What is the importance of operator precedence? It determines the order in which operations are performed and can greatly influence the ends result.  Precedence can be controlled using parenthesis.
+What are the incremental and decremental operators? ++ & --
+What are the arithmetic assignment operators? +=, -=, *=, /=
