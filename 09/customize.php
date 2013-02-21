@@ -39,7 +39,7 @@
                 <option value="large">large</option>
                 <option value="x-large">x-large</option>
                 <option value="xx-large">xx-large</option>
-            </select>
+            </select>            
             <select name="font_color">
                 <option value="">Font Color</option>            
                 <option value="999">Grey</option>
