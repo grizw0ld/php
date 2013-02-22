@@ -1,0 +1,15 @@
+What is the significance of a form’s action attribute? It tells the form where it will be submitting the form data to.  
+
+What is the significance of a form’s method attribute? It determines if the form is submitted through the POST or GET methods.
+
+Which method type is more secure? POST because the information passed is hidden
+
+Which method type can be bookmarked in a browser? GET, the information passed is visible in the address bar
+
+What predefined variable will contain the data from a form submission? $_GET or $_POST
+
+Why must an HTML page that contains a form that’s being submitted to a  PHP scrip be loaded through a url? So that when it is submitted to the PHP script it is also run through a URL, PHP scripts always need to be run through a url.  
+
+Under what circumstance will attempts to enable display_errors in a script not succeed? If the script contains certain types of errors preventing the script from executing, the errors will not display.  
+
+Why is it not secure to enable display_errors on live site?  Displaying errors provides too much information to the outside world and is also considered to be unprofessional.  

@@ -1,0 +1,67 @@
+<?php //script 8.11 - header.htm # 4 persue new time format
+
+//start output buffering
+ob_start();
+
+
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML  1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+   <title>
+   <?php 
+   if(defined('TITLE')){
+    print TITLE;
+   }else{
+    print "Raise High the Roof Beam!  A J.D. Salinger Fan Club";
+   }
+   ?>
+   </title>
+   <meta http-equiv="Content-Tyoe" content="text/html; charset=utf-8" />
+    <link rel="stylesheet"
+    href="css/1.css" type="text/css"
+    media="screen,projection" />
+ </head>
+ <body>
+	<!-- Script 8.2 header.html -->
+ <div id="wrapper">
+ <div id="header">
+    <p class="description">A J.D. Salinger Fan Club</p>
+    <h1><a href="index.php">Raise High the Roof Beam!</a></h1>
+    <ul id="nav">
+        <li><a href="books.php">Books</a></li>
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">Quotes</a></li>
+        <li><a href="login.php">Login</a></li>
+        <li><a href="register.php">Register</a></li>
+    </ul>
+ </div><!-- Header -->
+ 
+ <div id="sidebar">
+    <h2>Favorite Quotes</h2>
+    <p class="news">I don't exactly know what I mean by that, but I mean it
+    <br />- <em>The Catcher in the Rye</em></p>
+    <p class="news">I privately say to you old friend...  Please accept from 
+    me this unpretentious bouquet of early-blooming parentheses: (((()))).
+    <br />- <em>Raise Hight the Roof Beam, Carpenters and Seymore: 
+    An Introduction</em></p>
+    <p>
+    <?php 
+        //set the default time zone
+        date_default_timezone_set('America/New_York');
+        
+        //print out a formatted date
+        //print date('g:i a l F j');   
+        print date('m/d/Y h:i:s a'); //time formate mm/dd/yyyy hr:mi:sec
+    ?>
+    </p>
+ </div><!-- SideBar -->
+ 
+ <div id="content">
+ <!-- Begin Page Specific Content -->
+
+
+ </body>
+ </html>
+
+
