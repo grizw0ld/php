@@ -1,21 +1,28 @@
-<?php  //script 8.14 welcome .php
+<?php //script 9.7 welcome.php
 
-  //set the TITLE consant for the header.htm file
-  define('TITLE', 'Welcome to the J.D. Salinger fan club!');
+//begin the session which is necessary to access the $_SESSION array
+session_start();
 
-  //include the header.htm template
-  include('templates/header.htm');
+//set the title contant to be used in the header template
+define('TITLTE', 'Welcome to the J.D. Salinger Fan Club!');
+
+//include the page header
+include('templates/header.htm');
+
+print "<p>Welcome to the J.D. Salinger Fan Club!</h2>";
+
+//user $_SESSION to access the users email address and print a custom message
+print "<p<Hello " . $_SESSION['email'] . "</p>";
+
+//set server timezone
+date_default_timezone_set('America/New_York');
+
+//print a timestamp of when the user had logged in using $_SESSION
+print "<p>You have been logged in since " . date('g: i a', $_SESSION['loggedin']) . "</p>";
+
+print '<p><a href="logout.php">Click here to logout!</a></p>';
+
+//include the footer template
+include('templates/footer.htm');
 
 ?>
-
-<h2>Welcome to the J.D. Salinger Fan Club!</h2>
-<p>You have successfully logged in and can now 
-take advantage of everthing that the site has to offer</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<?php include('templates/footer.htm'); ?>
-

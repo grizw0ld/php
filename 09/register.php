@@ -2,7 +2,7 @@
 
 //create page title to be used in index
 define('TITLE', 'Register');
-include('templates/header.htm ');
+include('templates/header.htm');
 
 //Print introductory text
 print '<h2>Registration Page</h2>

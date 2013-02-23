@@ -1,4 +1,4 @@
-<?php //script 8.13 login.php #2
+<?php //script 9.6 login.php 3
 
 /**
  * @author M Grzechowiak
@@ -24,6 +24,12 @@ print '<h2>Login Form</h2>
                         //print '<p>You are now logged in!<br />
                         //Now you can Blah Blah Blah</p>';
                         ob_end_clean(); //cleans out the  buffer started in header.htm
+                        
+                        //start sessuib to be used with welcome.php
+                        session_start();
+						$_SESSION['email'] = $_POST['email'];
+						$_SESSION['loggedin'] = time();
+						
                         header('Location: welcome.php'); //redirects the user to welcome.php
                         exit(); //stops the rest of the script from executing
                     } else { //incorrect
