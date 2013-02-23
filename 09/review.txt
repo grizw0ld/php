@@ -1,17 +1,29 @@
-What is the difference between include and required?  Include will run tbut generate a warning, require will terminate the script. 
+ï»¿Chapter 9 Review
 
-Why can you put PHP into an included file even when it uses a html extension?  Because the code will be executed inside a PHP script.
+Where does a cookie store data?  Where does a session store data? Which is generally more secure.
 
-What the the differences between absolute and relative references to a file?  Absolute paths produce the exact location of the file on a storage device, relative produces the location of the file relative to where it is being called from.
+Cookies store data in the remote browser, Sessions store data on a text file on the server.  Sessions are more secure as cookies can be fairly easily cracked and manipulated
 
-How do you define a constant?  Are constant names case-sensitive or case-insensitive?  How can you check of a constant has been defined?  The define() function is used to define a constant (define('CONSTANT', 'value')).  Constants are case sensitive.  You can check to see if a constant has been defined using the defined() function which will return true of false.  
+Name two debugging techniques when trying to solve issues involving cookies.
 
-What is epoch?  What is a timestamp?  January 1st 1970 00:00:00 GMT.  A timestamp is a number representing how much time has passed since epoch.  
+1. You can print out the cookies variable values to troubleshoot issues with sending or receiving cookies
+2. You can use tools in your browser such as Overriding automatic cookie handling or FireCookie to troubleshoot issues with accessing the the cookie in a php script.
 
-What is the significance of $SERVER['REQUEST_METHOD']?  This value in the $SERVER array will tell you how the form has been submitted, ie: POST.
+How do the path and domain arguments to the setcookie() function affect the accessibility of the cookie?  
 
-How do you have a form element “remeber” previously submitted values?  You can make values on a form “sticky” by first checking if they had been filled out in the first placing using the isset() function and then setting them to their set value from the $_POST[] arrary.
+Path and Domain arguments are used to limit the accessibility of a cookie to a certain folder in the website structure.
 
-How can you see a PHP error that occurs within a form element (e.g. when presenting a form's element value)?  You can test if form elements have been filled out using empty() or !empty.  You can use substr() or substr_count() to check to see if values are present and in what capacity.  
+How do you delete a cookie?
 
-What does the 'headers already sent' error mean?  How can it be prevented?  This error indicates that something was sent to the browser (white space, html, or a print statement) prior to the header() function being called.  The error can be prevented using output buffering ob_start() & ob_flush() -or- ob_clean() to prevent the immediate execute of these items.   
+You can delete a cookie by setting the cookie back to empty values setcookie('cookie_name', FALSE, time()-1000, '/');  the values sent to the setcookie for deleting the cookie must match how the cookie was initially set. 
+
+What function must every page call if it needs to access or assign session data?
+
+Session_start();
+
+Why do sessions use cookies by default?
+
+Subsequent php pages use cookies to retrieve session information.
+
+ 
+
