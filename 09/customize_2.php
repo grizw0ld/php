@@ -3,6 +3,8 @@
  * ver 2, adding in the full list of arguments to the 
  * setcookie() functions to ensure that the cookie persists 
  * after the browser is closed
+ * made results sticky
+ * 
  */
  //handle the form if it has been submitted
  

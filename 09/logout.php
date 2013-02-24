@@ -1,6 +1,6 @@
 <?php //script 9.8 logout.php
 //start the session to access the session to be deleted
-session_start();
+session_start("log_in");
 
 //reset the session array
 $_SESSION = array();

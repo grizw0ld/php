@@ -26,7 +26,7 @@ print '<h2>Login Form</h2>
                         ob_end_clean(); //cleans out the  buffer started in header.htm
                         
                         //start sessuib to be used with welcome.php
-                        session_start();
+                        session_start("log_in");
 						$_SESSION['email'] = $_POST['email'];
 						$_SESSION['loggedin'] = time();
 						
