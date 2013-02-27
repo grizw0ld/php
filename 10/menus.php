@@ -8,8 +8,8 @@
 <title>Date Menus</title>
 </head
 <body>
-	<?php //Script 10.1 menus.php
-		function make_date_menus(){
+	<?php //Script 10.1 menus.php ****pursue, enhanced menu function
+		function make_date_menus($start_year, $number_of_years = 10){
 			
 			//create month array and print values to html select list
 			$months = array(
@@ -31,8 +31,8 @@
 			
 			//populate the year select list
 			print '<select name="year">';
-			$start_year = date('Y');
-			for($y = $start_year; $y < ($start_year+10); $y++){
+			//$start_year = date('Y');
+			for($y = $start_year; $y < ($start_year+$number_of_years); $y++){
 				print "<option value=\"$y\">$y</option>";
 			}
 			print '</select>';
@@ -40,7 +40,7 @@
 		
 		//print out the form		
 		print '<form action="" method="post">';
-		make_date_menus();
+		make_date_menus(1999, 25);
 		print '</form>';		
 	?>
 
