@@ -8,10 +8,17 @@
 <title>Cost Calculator</title>
 </head
 <body>
-	<?php //script 10.4 calculator.php
+	<?php //script 10.5 calculator.php revision 2
+		//deine tax rate
+		$tax = 8.74;
 	
 		function calculate_total($quantity, $price){
+			
+			global $tax;
+			
 			$total = $quantity * $price;
+			$taxrate = ($tax / 100) + 1;
+			$total *= $taxrate;
 			$total = number_format($total, 2);
 			return $total;
 		}
@@ -21,7 +28,7 @@
 				AND (is_numeric($_POST['price']))){
 					$total = calculate_total($_POST['quantity'], $_POST['price']);
 					print "<p>Your total comes to $<span style=\"font-weight:bold;\">
-						$total</span>.</p>";
+						$total</span>, including $tax percent tax rate</p>";
 				}else{
 					print "<p style=\"color:red;\">Please enter a 
 						valid quantity and price</p>";

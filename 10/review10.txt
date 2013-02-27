@@ -1,0 +1,27 @@
+﻿What is the basic syntax for a user defined function?  
+function function_name($arg1 [,$arg2...]){
+	//statement(s)
+}
+
+What naming rules must your function abide by?
+Functions follow the same naming conventions as variables, except they are not case sensitive (must start with a letter, cannot use special characters other than the underscore
+
+What rules must function arguments abide by?
+Same as above, except they are case sensitive
+
+How can you provide a default value for a functions argument?
+By doing the following function function_name($arg1, $arg2 = 'some value') {…}
+You must assign values to the arguments at the end, allowing the user to logically skip those arguments if they like
+
+Why doe the example code use \$n?  What would happen if it wasn't there
+The \ escapes the $ so that the statement will print $n instead of the value of the variable.  If it wasn't there the value of the variable would print twice.
+
+What is variable scope?  What scope does a function argument variable have?
+Variable scope defines where a variable will be available in a script.  Function arguments scope is only within the function itself.
+
+What scope does a variable within an included file have?
+I suppose the answer depends on where the variable lives in the included file.  Assuming it is outside of a function it will have the same scope of a regualr variable in both the original file and the file it is included in.  
+
+
+
+
