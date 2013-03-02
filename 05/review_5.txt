@@ -1,0 +1,20 @@
+How do you create a string? You can create a string by assigning a single or double quoted value to a variable ie: $new_string = 'some text';
+
+What are the differences between using singe and double quotation marks? Single quotes represent literal strings, items within double quote values are extrapolated, meaning that if a variable is used in double quotes its vale will be shown.
+
+What is the concatenation operator?  ( . ), ie: $string1 . $string2;.  What is the concatenation assignment operator? ( .= ) ie: $string1 .= 'add some text';
+
+What is the impact of having a newline in a string printed to the browser?  “\n” will be ignored by the browser.  How do you convert a newline character into a breaktag?  The nl2br() function will convert them.
+
+What problems can occur when HTML is entered into form elements whose values will later be printed back to the web browser?  This can allow the user to take control of your application entering other HTML tags/elements or even Javascript.  What steps can be taken to sanctify submitted data?  You can use one of the following PHPfunction, htmlspecialchars(), htmlentities() or strip_tags().  
+
+What function makes data safe to pass to a url? crypt()
+
+How do you escape problematic characters in a string? urlencode()  function is used to convert a string into a new string that can be passed through a url..  What happens if you do not escape them?  If certain characters are passed into a url the link may be broken, causing the page not to load properly, or you may not be able to properly access any passed values.
+
+The characters in a string are indexed beginning at what number? 0
+
+What does the trim() function do?  Trim will clear off any leading or trailing spaces in a string.  
+
+
+

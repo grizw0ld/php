@@ -1,0 +1,29 @@
+﻿Chapter 9 Review
+
+Where does a cookie store data?  Where does a session store data? Which is generally more secure.
+
+Cookies store data in the remote browser, Sessions store data on a text file on the server.  Sessions are more secure as cookies can be fairly easily cracked and manipulated
+
+Name two debugging techniques when trying to solve issues involving cookies.
+
+1. You can print out the cookies variable values to troubleshoot issues with sending or receiving cookies
+2. You can use tools in your browser such as Overriding automatic cookie handling or FireCookie to troubleshoot issues with accessing the the cookie in a php script.
+
+How do the path and domain arguments to the setcookie() function affect the accessibility of the cookie?  
+
+Path and Domain arguments are used to limit the accessibility of a cookie to a certain folder in the website structure.
+
+How do you delete a cookie?
+
+You can delete a cookie by setting the cookie back to empty values setcookie('cookie_name', FALSE, time()-1000, '/');  the values sent to the setcookie for deleting the cookie must match how the cookie was initially set. 
+
+What function must every page call if it needs to access or assign session data?
+
+Session_start();
+
+Why do sessions use cookies by default?
+
+Subsequent php pages use cookies to retrieve session information.
+
+ 
+
