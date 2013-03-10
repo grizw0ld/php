@@ -7,31 +7,32 @@
 <body>
 <?php //script 11.4 upload_file.php
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
-		if(move_uploaded_file($_FILES['the_file']['tmp_name'], "../uploads/{$_FILES['the_file']['name']}")){
-			print '<p>Your file has been uploaded</p>';
-		} else { //problem with moving the file
-			print '<p style="color: red;">Your file could not be uploaded because: ';
-			switch ($_FILES['the_file']['error']) {
-				case 1:
-					print 'The file exceedes the maximum upload size';
-					break;
-				case 2:
-					print 'The file exceedes the MAX_FILE_SIZE sertting in the html form';
-					break;
-				case 3:
-					print 'The file was only partially uploaded';
-					break;		
-				case 4:
-					print 'No file was uploaded';
-					break;		
-				case 6:
-					print 'The temperary folder does not exist';
-					break;									
-				default:
-					print 'Something unforeseen happened';
-					break;
-			}print '. </p>';//end paragraph / switch block
-		} //end else
+		if((is_writable("../uploads")) 
+		    && move_uploaded_file($_FILES['the_file']['tmp_name'], "../uploads/{$_FILES['the_file']['name']}")){
+				print '<p>Your file has been uploaded</p>';
+			} else { //problem with moving the file
+				print '<p style="color: red;">Your file could not be uploaded because: ';
+				switch ($_FILES['the_file']['error']) {
+					case 1:
+						print 'The file exceedes the maximum upload size';
+						break;
+					case 2:
+						print 'The file exceedes the MAX_FILE_SIZE sertting in the html form';
+						break;
+					case 3:
+						print 'The file was only partially uploaded';
+						break;		
+					case 4:
+						print 'No file was uploaded';
+						break;		
+					case 6:
+						print 'The temperary folder does not exist';
+						break;									
+					default:
+						print 'Something unforeseen happened';
+						break;
+				}print '. </p>';//end paragraph / switch block
+			} //end else
 	}//end initial if
 ?>
 

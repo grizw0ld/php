@@ -15,6 +15,10 @@
 			$problem = TRUE;
 			print '<p class="error">Please enter a username</p>';
 		}
+		if(strpos(file_get_contents($file), $_POST['username'])){
+			$problem = TRUE;
+			print '<p class="error">Username already taken</p>';
+		}
 		if(empty($_POST['password1'])){
 			$problem = TRUE;
 			print '<p class="error">Please enter a password</p>';

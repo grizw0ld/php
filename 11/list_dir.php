@@ -21,18 +21,24 @@
 	print '<hr /><h2>Files</h2>
 		<table cellpadding="2" cellspacing="2" align="left">
 			<tr>
-				<td>Name</td>
-				<td>Size</td>
-				<td>Last Modified</td>
+				<td><strong>Name</strong></td>
+				<td><strong>Size</strong></td>
+				<td><strong>Last Modified</strong></td>
+				<td><strong>Last Accessed</strong></td>
+				<td><strong>File Type</strong></td>
 			</tr>';
 	foreach ($contents as $item) {
 		if ( (is_file($search_dir . '/' . $item)) AND (SUBSTR($item, 0,1) != '.')){
 			$fs = filesize($search_dir . '/' . $item);
 			$lm = date('F j, Y', filemtime($search_dir . '/' . $item));
+			$at = date('F j, Y',fileatime($search_dir . '/' . $item));
+			$ft = filetype($search_dir . '/' . $item);
 			print "<tr>
 					<td>$item</td>
 					<td>$fs bytes</td>
 					<td>$lm</td>
+					<td>$at</td>
+					<td>$ft</td>
 				  </tr>\n";
 		}
 	}

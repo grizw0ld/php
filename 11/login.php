@@ -9,6 +9,7 @@
 	$file = '../users/users.txt';
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$loggedin = FALSE;
+		
 		$fp = fopen($file, 'rb'); //rb indicates that the file is open for reading in inary safe mode
 		while ( $line = fgetcsv($fp, 200, "\t") ) {
 			//print 'hello';
