@@ -1,0 +1,20 @@
+﻿What version of PHP are you running?  5.4.6-1ubuntu1.1
+
+What steps did you need to take to make a file or directory writable for your server?  $>sudo chmod 0777 file.txt
+
+What is the webroot directory as a concept?  What is the webroot directory or your website?  The webroot directory is where you store files for your website, the root directory being used for files accessible by browsers.  On my local machine, which is running Apache, my webroot is /var/www.
+
+What are two ways you can write data to files?  Two functions that can be used to write data are:
+file_put_contents($file_name, $data_to_write);  This function will handle opening and closing the file automatically.  The other function that can be used is fwrite($file_name, $data_to_write)l  this function needs to be used in conjunction with fopen($file, mode) and fclose($file) to avoid collisions.  
+
+How you you append new data to a file, as opposed to overwriting existing data?  By using the FILE_APPEND statement in your writing function, file_put_contents($file, $data_to_write, FILE_APPEND);
+
+How to you ensure that data is put on its own line?  By appending the PHP_EOL statement to the data being written by a function, file_put_contents($file, $data . PHP_EOL, append)l
+
+In order for a form to accept file uploads, what attributes must the opening form tag have?  The opening form tag must include the enctype=”multupart/form-data” attribute and the method must be post.
+
+In what variable will PHP be able to access an uploaded file?  What function is used to move the file to it's final destination on the server?  The uploaded file can be accessed using $_FILES['file_name'].  To move the file, use the move_uploaded_file() function, as so: move_uploaded_file($file_name,  '/path/to/dest/filename');
+
+How does the fgetcsv() function differ from file() or file_get_contents()?  The fgetcsv() function returns the contents of a file as an array, using a set delimiter as a marker for the end of the current array element and the start of a new.  Both the file() and the file_get_contents() functions read the entire contents of a file into a string. 
+
+
