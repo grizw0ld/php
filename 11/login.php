@@ -6,13 +6,12 @@
 <body>
 	<h1>Login</h1>
 <?php //script 11.8 login.php
-	$file = '.../users/users.txt';
+	$file = '../users/users.txt';
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$loggedin = FALSE;
-		ini_set('auto_detect_line_endings', 1);
 		$fp = fopen($file, 'rb'); //rb indicates that the file is open for reading in inary safe mode
 		while ( $line = fgetcsv($fp, 200, "\t") ) {
-			print 'hello';
+			//print 'hello';
 			if( ($line[0] == $_POST['username'])
 			&& ($line[1] == md5(trim($_POST['password'])))){
 				$loggedin = TRUE;
