@@ -8,16 +8,13 @@
 <?php //script 11.8 login.php
 	$file = '.../users/users.txt';
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
-		print $_POST['username'] . ' ' . md5($_POST['password']);
-		$logged00in = FALSE;
+		$loggedin = FALSE;
 		ini_set('auto_detect_line_endings', 1);
 		$fp = fopen($file, 'rb'); //rb indicates that the file is open for reading in inary safe mode
-		while ($line = fgetcsv($fp, 1000, "\t")) {
-			// print $_POST['username'];
-			// print md5(trim($_POST['password']));
-			print_r($line);
+		while ( $line = fgetcsv($fp, 200, "\t") ) {
+			print 'hello';
 			if( ($line[0] == $_POST['username'])
-			AND ($line[1] == md5(trim($_POST['password'])))){
+			&& ($line[1] == md5(trim($_POST['password'])))){
 				$loggedin = TRUE;
 				break;
 			}
