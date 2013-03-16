@@ -1,0 +1,31 @@
+﻿What version of MySQL are you using?  What values do you use to connect to MySQL?  Version 5.5.29, server:localhost, user:mark pass: password
+
+How does a PHP script connect to a MySQL server?  How does it disconnect?  In order to connect to a database you first need to establish a connection to the server using the mysql_connect() function, you need to provide the function with the server, username and password arguments.  In order to disconnect from the server you run the mysql_close() function.
+
+What is the error suppression operator?  What does it do?  The error suppression operator is the '@' symbol, using this in front of a function does not prevent errors, but rather suppresses errors that may be evoked so that they can be handled.  This can allow a mysql error to be displayed in place of a PHP error.
+
+What function returns MySQL reported errors?  The mysql_error() function
+
+What debugging technique should you use when having problems with a PHP script that interacts with a MySQL database?  You can use the error suppression operator to ensure that the error generated is not a PHP error and then print out error using the mysql_error() function along with query that generated the error
+
+Whar SQL command is used to create a table?  To add new records?  To modify records?  0To remove records?  
+CREATE tablename (
+column_name		type		key,
+column2_name		type,
+…
+);
+
+INSERT INTO tablename
+(col1, col2, col3)
+VALUES
+(val1, val2, val3);
+
+UPDATE tablename SET col1 = val1 WHERE col2 = somevalue;
+
+DELETE FROM tablename WHERE col1 = value;
+
+What function should string values be run through to prevent SQL injection attacks?  The mysql_real_escape_string() function will escape any potentially insecure trying to be passed into the database.
+
+
+
+
